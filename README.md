@@ -30,6 +30,81 @@ Baris kode System.out.println("Jumlah bilangan genap dari 1 hingga " + n + " ada
 
 ![Screenshot (24)](https://github.com/Hanifalkahfi05/TUGAS-MKUCODING-HANIFALKHAFI/assets/147523271/a5b92864-2d5b-4ad0-829a-b04827627bce)
 
+# TUGAS 3
+1
+
+      // Membuat kamus zodiak
+        String[] zodiacSigns = {
+                "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
+                "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisc
+Array zodiacSigns adalah cara yang baik untuk menyimpan daftar data yang memiliki hubungan atau sifat yang sama. Dalam hal ini, array ini digunakan untuk menyimpan daftar nama-nama zodiak. Setiap elemen dalam array adalah string yang mewakili nama zodiak.
+
+2
+
+      int[] startDates = { 21, 20, 21, 21, 23, 23, 23, 23, 22, 22, 20, 19 };
+        int[] endDates = { 19, 20, 20, 22, 22, 22, 22, 21, 21, 19, 18, 20 };
+Array startDates dan endDates yang Anda berikan mungkin digunakan untuk merepresentasikan rentang tanggal yang berkaitan dengan periode zodiak atau mungkin juga digunakan untuk tujuan lain yang melibatkan tanggal. startDates adalah array yang berisi tanggal awal (atau tanggal mulai) dari masing-masing periode.endDates adalah array yang berisi tanggal akhir (atau tanggal selesai) dari masing-masing periode.
+
+3
+
+      // Meminta pengguna memasukkan bulan dan tanggal lahir
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan bulan kelahiran (dalam angka): ");
+        int month = scanner.nextInt();
+        System.out.print("Masukkan hari kelahiran: ");
+        int day = scanner.nextInt();
+Scanner scanner = new Scanner(System.in);: Ini adalah baris yang digunakan untuk membuat objek Scanner yang akan digunakan untuk mengambil masukan dari pengguna melalui konsol.System.out.print("Masukkan bulan kelahiran (dalam angka): ");: Ini adalah perintah yang mencetak pesan ke layar untuk meminta pengguna memasukkan bulan kelahiran dalam bentuk angka.int month = scanner.nextInt();: Ini adalah baris kode yang digunakan untuk membaca masukan bulan yang dimasukkan oleh pengguna dan menyimpannya dalam variabel month sebagai integer.System.out.print("Masukkan hari kelahiran: ");: Ini adalah perintah yang mencetak pesan ke layar untuk meminta pengguna memasukkan tanggal kelahiran.int day = scanner.nextInt();: Ini adalah baris kode yang digunakan untuk membaca masukan tanggal yang dimasukkan oleh pengguna dan menyimpannya dalam variabel day sebagai integer.
+
+4
+
+            // Mencari zodiak yang sesuai dengan tanggal lahir
+        String zodiacSign = null;
+        for (int i = 0; i < zodiacSigns.length; i++) {
+            if ((month == i + 1 && day >= startDates[i]) || (month == i + 2 && day <= endDates[i])) {
+                zodiacSign = zodiacSigns[i];
+                break;
+String zodiacSign = null;: Pada awalnya, Anda mendeklarasikan variabel zodiacSign sebagai null. Variabel ini akan digunakan untuk menyimpan zodiak yang sesuai setelah pencarian.
+for (int i = 0; i < zodiacSigns.length; i++) {: Ini adalah perulangan for yang digunakan untuk mengiterasi melalui array zodiacSigns yang berisi nama-nama zodiak.
+if ((month == i + 1 && day >= startDates[i]) || (month == i + 2 && day <= endDates[i])) {: Ini adalah pernyataan if yang memeriksa apakah bulan dan tanggal kelahiran yang dimasukkan oleh pengguna cocok dengan rentang tanggal yang sesuai dengan zodiak dalam array. Dalam pernyataan ini:
+zodiacSign = zodiacSigns[i];: Jika kondisi dalam pernyataan if adalah benar, maka variabel zodiacSign akan diisi dengan nama zodiak yang sesuai dengan rentang tanggal kelahiran tersebut.
+break;: Setelah menemukan zodiak yang sesuai, perulangan dihentikan menggunakan break. Ini berarti kita hanya mencari zodiak yang sesuai dengan tanggal lahir pengguna dan tidak perlu melanjutkan iterasi melalui array zodiak.
+
+5
+
+      // Menampilkan zodiak
+        if (zodiacSign != null) {
+            System.out.println("Zodiak Anda adalah " + zodiacSign + ".");
+        } else {
+            System.out.println("Tanggal lahir tidak valid.");
+        }
+if (zodiacSign != null) {: Ini adalah pernyataan if yang memeriksa apakah variabel zodiacSign tidak sama dengan null
+System.out.println("Zodiak Anda adalah " + zodiacSign + ".");: Jika kondisi dalam pernyataan if adalah benar, maka program akan mencetak pesan yang menginformasikan kepada pengguna zodiak yang sesuai dengan tanggal lahir mereka. else {: Jika variabel zodiacSign masih null, maka pernyataan dalam blok else akan dijalankan.System.out.println("Tanggal lahir tidak valid.");: Jika kondisi dalam pernyataan else adalah benar, maka program akan mencetak pesan kesalahan yang menginformasikan kepada pengguna bahwa tanggal lahir yang dimasukkan tidak valid.
+CONTOHNYA 
+
+![Screenshot (24)](https://github.com/Hanifalkahfi05/TUGAS-MKUCODING-HANIFALKHAFI/assets/147523271/4e1e7ec1-3f02-4b70-9622-7e85e3cf46ac)
+
+# TUGAS 4
+1
+
+     // Membuat sebuah array integer
+        int[] angka = {1, 2, 3, 4, 5};
+int[] angka: Ini adalah deklarasi variabel yang membuat sebuah array integer dengan nama angka. Tanda [] menunjukkan bahwa ini adalah tipe data array.
+{1, 2, 3, 4, 5}: Ini adalah bagian yang menginisialisasi array angka. Dalam kurung kurawal tersebut, Anda memasukkan nilai-nilai yang ingin Anda tambahkan ke dalam array. Dalam kasus ini, Anda telah mengisi array dengan lima nilai integer yaitu 1, 2, 3, 4, dan 5.
+
+2
+
+     // Menampilkan semua nilai dalam array menggunakan perulangan for
+        for (int i = 0; i < angka.length; i++) {
+            System.out.println("Nilai ke-" + (i + 1) + ": " + angka[i]);
+for (int i = 0; i < angka.length; i++) {: Ini adalah perulangan for yang digunakan untuk mengiterasi melalui semua elemen dalam array angka. Perulangan ini dimulai dengan inisialisasi variabel i ke 0. Kondisi i < angka.length menentukan bahwa perulangan akan berlanjut selama i kurang dari panjang (jumlah elemen) array angka. Pada setiap iterasi, i akan ditambahkan dengan 1 menggunakan i++.System.out.println("Nilai ke-" + (i + 1) + ": " + angka[i]);: Ini adalah pernyataan yang digunakan untuk mencetak nilai dalam array. 
+CONTOHNYA
+
+![Screenshot (25)](https://github.com/Hanifalkahfi05/TUGAS-MKUCODING-HANIFALKHAFI/assets/147523271/1cd84eaa-6f1a-4a64-af8d-d603ea0ec2b9)
+
+
+
+
+
 
 
   
